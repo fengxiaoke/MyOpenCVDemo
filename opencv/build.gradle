@@ -149,18 +149,23 @@ android {
 dependencies {
 }
 
-////发布Maven配置
-//apply plugin: "maven-publish"
-//
-//uploadArchives {
-//    repositories.mavenDeployer {
-//        pom.groupId = "com.fxk" // 唯一标识（通常为模块包名，也可以任意）
-//        pom.artifactId = "opencv"//项目名称（通常为类库模块名称，也可以任意）
-//        pom.version = "1.0.0" // 版本号
-//        pom.packaging = "aar"//
-//        // 配置本地仓库路径，项目根目录下
-//        repository(url: uri("${rootProject.projectDir}/repo"))
-//        //github上的仓库
-//        //repository(url: "https://raw.githubusercontent.com/zhang106209/MavenDemo/master")
-//    }
-//}
+//发布Maven配置
+apply plugin: "maven-publish"
+
+afterEvaluate {
+    publishing {
+//    配置maven-publishing插件的输出物
+        publications {
+            maven(MavenPublication) {
+                groupId = 'com.fxk'
+                artifactId = 'opencv'
+                version = '1.0.0'
+            }
+        }
+        repositories {
+            maven {
+                url = uri('../repo')
+            }
+        }
+    }
+}
