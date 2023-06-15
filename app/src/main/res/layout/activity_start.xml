@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".StartActivity">
+
+    <Button
+        android:id="@+id/btn_opencv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="opencv"/>
+    <Button
+        android:id="@+id/btn_bsdiff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="bsdiff"/>
+    <Button
+        android:id="@+id/btn_serialport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="serialport"/>
+    <Button
+        android:id="@+id/btn_bluetooth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="bluetooth"/>
+</LinearLayout>
